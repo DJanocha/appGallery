@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wild cats gallery</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="gallery">
+      <div class="animal animal1">
+        <div>this is a cheetah of course</div>
+        <div>cheetah</div>
+        <!-- <div>check out other cubs by clicking on them</div> -->
+      </div>
+      <div class="animal animal2">
+        <div>this is a coyote of course</div>
+        <div>coyote</div>
+        <!-- <div>check out other cubs by clicking on them</div> -->
+      </div>
+      <div class="animal animal3">
+        <div>this is a hyena of course</div>
+        <div>hyena</div>
+        <!-- <div>check out other cubs by clicking on them</div> -->
+      </div>
+      <div class="animal animal4">
+        <div>this is a lion of course</div>
+        <div>lion</div>
+        <!-- <div>check out other cubs by clicking on them</div> -->
+      </div>
+      <div class="animal animal5">
+        <div>this is a lynx of course</div>
+        <div>lynx</div>
+        <!-- <div>check out other cubs by clicking on them</div> -->
+      </div>
+      <div class="animal animal6">
+        <div>this is a tiger of course</div>
+        <div>tiger</div>
+        <!-- <div>check out other cubs by clicking on them</div> -->
+      </div>
+    </div>
+    <script>
+      const animalsDivs = [...document.querySelectorAll(".animal")]
+      const toggleDiv = (e) => {
+        if (![...e.target.classList].includes("animal")) return
+        if ([...document.querySelectorAll(".animal-open")].length > 0 && ![...e.target.classList].includes("animal-open")) {
+          console.log("juz jest jakis otwarty. trzeba to obsluzyc")
+          document.querySelector(".animal-open").classList.toggle("animal-open")
+        }
+        e.target.classList.toggle("animal-open")
+      }
+      const toggleDescriptions = (e) => {
+        console.log(e.propertyName)
+        if (!e.propertyName.includes("flex")) return
+        e.target.classList.toggle("show-description")
+        console.log(e.target)
+      }
+      animalsDivs.forEach((ad) => {
+        ad.addEventListener("click", toggleDiv)
+        ad.addEventListener("transitionend", toggleDescriptions)
+      })
+    </script>
+  </body>
+</html>

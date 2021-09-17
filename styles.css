@@ -1,0 +1,69 @@
+:root {
+}
+.gallery {
+  display: flex;
+  flex-direction: row;
+  /* max-width: 95vw; */
+  max-height: 95vh;
+  overflow: hidden;
+}
+.animal {
+  height: 100vh;
+  background-size: cover;
+  transition: flex 1s;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.animal > * {
+  height: auto;
+  width: auto;
+  justify-content: space-between;
+  transition: transform 1s;
+  /* border: 1px solid green; */
+  font-size: 3rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: black;
+  /* background-color: rgba(170, 180, 21, 0.753); */
+  box-shadow: 5px 5px 5px #3339;
+  text-align: center;
+  text-shadow: 3px 3px white;
+}
+.animal > *:first-child {
+  transform: translateY(-300%);
+}
+.animal > *:last-child {
+  transform: translateY(200%);
+}
+.animal-open {
+  flex: 8;
+}
+.animal.show-description > *:first-child {
+  transform: translateY(0);
+}
+.animal1 {
+  background-image: url(https://images.unsplash.com/photo-1516728778615-2d590ea1855e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1868&q=80);
+}
+.animal2 {
+  background-image: url(https://images.unsplash.com/photo-1506617681080-aebadcd0b8bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80);
+}
+.animal3 {
+  background-image: url(https://images.unsplash.com/photo-1589652045989-0fe2ed330576?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80);
+}
+.animal4 {
+  background-image: url(https://images.unsplash.com/photo-1603626127249-7c3932a000ab?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1868&q=80);
+}
+.animal5 {
+  background-image: url(https://cdn.wallpapersafari.com/32/51/tFO4lM.jpg);
+}
+.animal6 {
+  background-image: url(https://images.unsplash.com/photo-1586617356423-52763004deac?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1940&q=80);
+}
+.animal > *:first-child,
+.animal > *:last-child {
+  margin: 0 auto;
+  /* border: 1px solid red; */
+  /* color: blue; */
+}
